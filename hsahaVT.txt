@@ -1,0 +1,74 @@
+create table user_(
+	userid SERIAL,
+	username varchar(20) primary key,
+	password varchar(20),
+	bakiye int
+);
+--drop table user_
+
+insert into user_ (username,password,bakiye) values('admin','admin',10000);
+insert into user_ (username,password,bakiye) values('msgul','1123',100);
+
+create table randevu(
+	randevuid SERIAL primary key,
+	sahaid int,
+	gun int,
+	saat int,
+	userid int
+);
+--drop table randevu
+
+insert into randevu (sahaid,gun,saat,userid) values (1,1,1,1);
+insert into randevu (sahaid,gun,saat,userid) values (1,0,0,1);
+insert into randevu (sahaid,gun,saat,userid) values (1,0,1,1);
+
+create table sahalar(
+	sahaid int primary key,
+	sahaismi varchar(20)
+);
+--drop table sahalar
+
+insert into sahalar values (1,'Bağcılar');
+insert into sahalar values (2,'Esenler');
+insert into sahalar values (3,'Bakırköy');
+insert into sahalar values (4,'Güngören1');
+insert into sahalar values (5,'Zeytinburnu');
+insert into sahalar values (5,'Göngören2');
+
+create table saatler(
+	saatid int primary key,
+ 	zaman_araligi varchar(5)
+);
+--drop table saatler
+
+insert into saatler values(0,'9-10');
+insert into saatler values(1,'10-11');
+insert into saatler values(2,'11-12');
+insert into saatler values(3,'12-13');
+insert into saatler values(4,'13-14');
+insert into saatler values(5,'14-15');
+insert into saatler values(6,'15-16');
+insert into saatler values(7,'16-17');
+insert into saatler values(8,'17-18');
+insert into saatler values(9,'18-19');
+insert into saatler values(10,'19-10');
+insert into saatler values(11,'20-21');
+insert into saatler values(12,'21-22');
+
+create table gunler(
+	gunid int primary key,
+ 	gunadi varchar(15)
+);
+--drop table gunler
+
+insert into gunler values(0,'Pazartesi');
+insert into gunler values(1,'Salı');
+insert into gunler values(2,'Çarşamba');
+insert into gunler values(3,'Perşembe');
+insert into gunler values(4,'Cuma');
+insert into gunler values(5,'Cumartesi');
+insert into gunler values(6,'Pazar');
+
+
+
+
